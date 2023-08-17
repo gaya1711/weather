@@ -6,11 +6,11 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('papa'));
 
-app.get("/", function(req, res){
+app.get("https://gaya1711.github.io/weather/", function(req, res){
     res.sendFile(__dirname+"/index.html");
 })
 
-app.post("/", function(req, res){
+app.post("https://gaya1711.github.io/weather/", function(req, res){
     console.log(req.body.city);
     const query=req.body.city;
     const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid=fbc1c0c09913d943a2a7a2acfcbca211&units=metric"
